@@ -6,7 +6,7 @@ import AboutPage from "./pages/about";
 import NotFoundPage from "./pages/not-found";
 import CoinDetailsPage from "./pages/coin-details";
 
-const API_URL = import.meta.env.VITE_API_URL;
+const API_URL = import.meta.env.VITE_COINS_API_URL;
 
 const App = () => {
   const [coins, setCoins] = useState([]);
@@ -34,23 +34,6 @@ const App = () => {
     };
 
     fetchCoins();
-
-    // fetch(API_URL)
-    //   .then((res) => {
-    //     if (!res.ok) throw new error("Failed to fetch data");
-    //     return res.json();
-    //   })
-
-    //   .then((data) => {
-    //     console.log(data);
-    //     setCoins(data);
-    //     setLoading(false);
-    //   })
-
-    //   .catch((err) => {
-    //     setError(err.message);
-    //     setLoading(false);
-    //   });
   }, [limit]);
 
   return (
