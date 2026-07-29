@@ -34,7 +34,7 @@ const App = () => {
     };
 
     fetchCoins();
-  }, [limit]);
+    }, [limit]);
 
   return (
     <>
